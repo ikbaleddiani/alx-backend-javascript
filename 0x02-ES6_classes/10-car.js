@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-
 export default class Car {
     constructor(brand, motor, color) {
       this._brand = brand;
@@ -7,11 +5,7 @@ export default class Car {
       this._color = color;
     }
   
-    static get [Symbol.species]() {
-      return this;
-    }
-  
     cloneCar() {
-      return new this.constructor();
+      return new this.constructor(this._brand, this._motor, this._color);
     }
   }
