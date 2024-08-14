@@ -1,25 +1,30 @@
-/// <reference path="./subjects/Java.ts" />
-/// <reference path="./subjects/Cpp.ts" />
-/// <reference path="./subjects/Teacher.ts" />
-/// <reference path="./subjects/Subject.ts" />
-/// <reference path="./subjects/React.ts" />
+/// <reference path='./subjects/Subject.ts' />
+/// <reference path='./subjects/Teacher.ts' />
+/// <reference path='./subjects/Cpp.ts' />
+/// <reference path='./subjects/Java.ts' />
+/// <reference path='./subjects/React.ts' />
+
 export const cpp: Subjects.Cpp = new Subjects.Cpp();
 export const java: Subjects.Java = new Subjects.Java();
 export const react: Subjects.React = new Subjects.React();
-export const cTeacher: Subjects.TeacherInterface = {
-  firstName: "isa",
-  lastName: "Dr",
-  experienceTeachingC: 8,
-};
+
+export const cTeacher: Subjects.Teacher = {
+    firstName: 'look',
+    lastName: 'rm',
+    experienceTeachingC: 3,
+}
+
+console.log('C++');
 cpp.setTeacher(cTeacher);
-console.log("C++")
-console.log(cpp.getRequirements())
-console.log(cpp.getAvailableTeacher()
+console.log(cpp.getRequirements());
+console.log(cpp.getAvailableTeacher());
+
+console.log('Java');
 java.setTeacher(cTeacher);
-console.log("Java")
-console.log(java.getRequirements())
-console.log(java.getAvailableTeacher())
+console.log(java.getRequirements());
+console.log(java.getAvailableTeacher());
+
+console.log('React');
 react.setTeacher(cTeacher);
-console.log("React")
-console.log(react.getRequirements())
-console.log(react.getAvailableTeacher())
+console.log(react.getRequirements());
+console.log(react.getAvailableTeacher());
